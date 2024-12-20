@@ -1,4 +1,4 @@
-package Classes;
+package modules;
 
 public class Person {
     private String name;

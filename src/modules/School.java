@@ -1,7 +1,6 @@
-package Classes;
+package modules;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Comparator;
 
 public class School{
@@ -13,14 +12,6 @@ public class School{
 
     public void addMember(Person person) {
         this.members.add(person);
-    }
-
-    public void addmember(Student student) {
-        this.members.add(student);
-    }
-
-    public void addmember(Teacher teacher) {
-        this.members.add(teacher);
     }
 
     public void sortMembersBySurname() {

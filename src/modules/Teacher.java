@@ -1,4 +1,4 @@
-package Classes;
+package modules;
 
 public class Teacher extends Person {
     private String subject;
@@ -37,13 +37,11 @@ public class Teacher extends Person {
     }
 
     public void giveRaise(int persent) {
-        if (yearsOfExperience > 10) {
-            this.salary += this.salary * persent;
-        }
+        setSalary(getSalary() + persent * getSalary());
     }
 
     @Override
     public String toString() {
-        return super.toString() + String.format("I teach %s", getSubject());
+        return super.toString() + String.format("I teach %s. My salary: %s", getSubject(), getSalary());
     }
 }
