@@ -3,9 +3,9 @@ package modules;
 public class Teacher extends Person {
     private String subject;
     private int yearsOfExperience;
-    private int salary;
+    private double salary;
 
-    public Teacher(String name, String surname, int age, String genderStr, String subject, int yearsOfExperience, int salary) {
+    public Teacher(String name, String surname, int age, String genderStr, String subject, int yearsOfExperience, double salary) {
         super(name, surname, age, genderStr);
         setSubject(subject);
         setYearsOfExperience(yearsOfExperience);
@@ -21,23 +21,23 @@ public class Teacher extends Person {
     }
 
     public int getYearsOfExperience() {
-        return yearsOfExperience;
+        return this.yearsOfExperience;
     }
 
     public void setYearsOfExperience(int yearsOfExperience) {
         this.yearsOfExperience = yearsOfExperience;
     }
 
-    public int getSalary() {
+    public double getSalary() {
         return salary;
     }
 
-    public void setSalary(int salary) {
+    public void setSalary(double salary) {
         this.salary = salary;
     }
 
-    public void giveRaise(int persent) {
-        setSalary(getSalary() + persent * getSalary());
+    public void giveRaise(double persent) {
+        setSalary(getSalary() + ((persent) * getSalary()));
     }
 
     @Override

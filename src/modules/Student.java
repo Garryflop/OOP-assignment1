@@ -1,6 +1,6 @@
 package modules;
 
-import java.util.ArrayList;
+import java.util.*;
 
 public class Student extends Person {
     private static int counter;
@@ -39,40 +39,30 @@ public class Student extends Person {
         }
 
         int total = grades.stream().mapToInt(x -> x).sum();
-        int persentage;
-        persentage = total / grades.size();
+        int average;
+        average = total / grades.size();
+        Map<Integer, Double> gpaMap = new HashMap<>();
+        gpaMap.put(50, 0.0);
+        gpaMap.put(55, 1.0);
+        gpaMap.put(60, 1.33);
+        gpaMap.put(65, 1.67);
+        gpaMap.put(70, 2.0);
+        gpaMap.put(75, 2.33);
+        gpaMap.put(80, 2.67);
+        gpaMap.put(85, 3.0);
+        gpaMap.put(90, 3.33);
+        gpaMap.put(95, 3.67);
+        gpaMap.put(100, 4.0);
 
-        if (persentage < 50){
-            return 0;
+        double gpa = 0.0;
+        for (Map.Entry<Integer, Double> entry : gpaMap.entrySet()) {
+            if (average < entry.getKey()) {
+                gpa = entry.getValue();
+                break;
+            }
         }
-        else if (persentage < 55){
-            return 1;
-        }
-        else if (persentage < 60){
-            return 1.33;
-        }
-        else if (persentage < 65){
-            return 1.67;
-        }
-        else if (persentage < 70){
-            return 2.0;
-        }
-        else if (persentage < 75){
-            return 2.33;
-        }
-        else if (persentage < 80){
-            return 2.67;
-        }
-        else if (persentage < 85){
-            return 3.0;
-        }
-        else if (persentage < 90){
-            return 3.33;
-        }
-        else if (persentage < 95){
-            return 3.67;
-        }
-        return 4.0;
+
+        return gpa;
     }
 
     @Override

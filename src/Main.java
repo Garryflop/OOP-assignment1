@@ -45,14 +45,13 @@ public class Main {
             int salary = Integer.parseInt(parts[6]);
             Teacher teacher = new Teacher(name, surname, age, gender, subject, year, salary);
             int length = parts.length;
-            for (int i = 7; i < length; i++) {
-                if (teacher.getYearsOfExperience() > 10){
-                    teacher.giveRaise(25);
-                }
+
+            if (teacher.getYearsOfExperience() > 10){
+                teacher.giveRaise(0.25);
             }
             school.addMember(teacher);
         }
         school.sortMembersBySurname();
-        System.out.println(school.toString());;
+        System.out.println(school.toString());
     }
 }
