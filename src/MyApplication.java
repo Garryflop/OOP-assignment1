@@ -8,8 +8,8 @@ import java.util.Scanner;
 
 public class MyApplication {
     public static void main(String[] args) throws FileNotFoundException {
-        File students = new File("C:\\Users\\harry\\IdeaProjects\\OOP-assignment1\\src\\Sources\\students.txt");
-        File teachers = new File("C:\\Users\\harry\\IdeaProjects\\OOP-assignment1\\src\\Sources\\teachers.txt");
+        File students = new File("C:\\Users\\harry\\IdeaProjects\\OOP-assignment1\\src\\data\\students.txt");
+        File teachers = new File("C:\\Users\\harry\\IdeaProjects\\OOP-assignment1\\src\\data\\teachers.txt");
         Scanner sc1 = new Scanner(students);
         Scanner sc2 = new Scanner(teachers);
         School school = new School();
