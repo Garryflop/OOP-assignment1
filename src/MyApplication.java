@@ -1,6 +1,6 @@
-import modules.School;
-import modules.Student;
-import modules.Teacher;
+import models.School;
+import models.Student;
+import models.Teacher;
 
 import java.io.File;
 import java.io.FileNotFoundException;
